@@ -7,5 +7,4 @@ docker run --network etl_network -it --rm tcc_loader
 
 # Set up Faker-JS project
 docker build -t generator_fakerjs generators/faker-js_faker/
-docker run --network etl_network -it --rm -v ./generators/faker-js_faker/:/generator generator_fakerjs
-#  run
+docker run --network etl_network --memory="1g" --cpus="2.0" -it --rm -v ./generators/faker-js_faker/:/generator generator_fakerjs run
