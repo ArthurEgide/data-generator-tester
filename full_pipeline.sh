@@ -13,6 +13,6 @@ docker run --network tcc_egide --memory="1g" --cpus="2.0" -it --rm -v ./generato
 docker build -t generator_fakedata generators/lucapette-fakedata/
 docker run --network tcc_egide --memory="1g" --cpus="2.0" -it --rm -e PGPASSWORD=egide -v ./generators/lucapette-fakedata/:/usr/generator generator_fakedata run
 
-# Set up Fakedata
+# Set up JFairy
 docker build -t generator_jfairy generators/devskiller_jfairy/
-docker run --network tcc_egide --memory="1g" --cpus="2.0" -it --rm -v ./generators/devskiller_jfairy/:/usr/generator generator_jfairy
+docker run --network tcc_egide --memory="1g" --cpus="2.0" -it --rm -v ./generators/devskiller_jfairy/:/usr/generator generator_jfairy run
