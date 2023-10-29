@@ -23,4 +23,7 @@ docker run --network tcc_egide --memory="1g" --cpus="2.0" -it --rm -v ./generato
 docker build -t generator_fzaninotto generators/fzaninotto_faker
 docker run --network tcc_egide --memory="1g" --cpus="2.0" -it --rm generator_fzaninotto
 
--v ./generators/fzaninotto_faker/:/usr/generator 
+# Set up evoSql Failed
+docker build -t generator_evosql generators/evosql/
+docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=evosqldemo -e MYSQL_DATABASE=evosqldemo -e MYSQL_USER=evosqldemo -e MYSQL_PASSWORD=evosqldemo mysql:8.2
+
