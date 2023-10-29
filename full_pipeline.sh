@@ -16,3 +16,11 @@ docker run --network tcc_egide --memory="1g" --cpus="2.0" -it --rm -e PGPASSWORD
 # Set up JFairy
 docker build -t generator_jfairy generators/devskiller_jfairy/
 docker run --network tcc_egide --memory="1g" --cpus="2.0" -it --rm -v ./generators/devskiller_jfairy/:/usr/generator generator_jfairy run
+
+# Special case generatedata
+
+# Set up fzaninotto/Faker
+docker build -t generator_fzaninotto generators/fzaninotto_faker
+docker run --network tcc_egide --memory="1g" --cpus="2.0" -it --rm generator_fzaninotto
+
+-v ./generators/fzaninotto_faker/:/usr/generator 
