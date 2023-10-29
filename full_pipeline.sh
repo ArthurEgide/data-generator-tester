@@ -27,3 +27,7 @@ docker run --network tcc_egide --memory="1g" --cpus="2.0" -it --rm generator_fza
 docker build -t generator_evosql generators/evosql/
 docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=evosqldemo -e MYSQL_DATABASE=evosqldemo -e MYSQL_USER=evosqldemo -e MYSQL_PASSWORD=evosqldemo mysql:8.2
 
+# Set up faker-ruby/faker Failed
+docker build -t generator_rubyfaker generators/fakerruby_faker/
+docker run --network tcc_egide --memory="1g" --cpus="2.0" -it --rm -v ./generators/fakerruby_faker/:/usr/generator generator_rubyfaker
+
