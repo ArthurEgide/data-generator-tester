@@ -1,6 +1,6 @@
 [submodule "generators"]
 	path = generators
-	url = git@bitbucket.org:ArthurEgide/generators.git
+	url = git@github.com:ArthurEgide/generators.git
 [submodule "tcc_loader"]
 	path = tcc_loader
-	url = git@bitbucket.org:ArthurEgide/tcc_loader.git
+	url = git@github.com:ArthurEgide/tcc_loader.git
